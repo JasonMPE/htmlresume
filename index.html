@@ -24,6 +24,69 @@
       <link rel="stylesheet" href="css/style-xlarge.css" />
     </noscript>
     <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	<!-- avatar rotation-->
+	<style>
+	#avatar {
+	  width: 120px;
+	  height: 120px;
+	  margin: 55px auto 35px;
+	  background: url(/assets/img/avatar120.jpg);
+	  border-radius: 50%;
+	  box-shadow: 0 0 0px 4px white, 0 0 4px 4px #eee;
+	  overflow: hidden;
+	  display: block; 
+	}
+  #avatar:hover {
+    -webkit-animation: spin 4s linear infinite;
+    -moz-animation: spin 4s linear infinite;
+    -ms-animation: spin 4s linear infinite;
+    -o-animation: spin 4s linear infinite;
+    animation: spin 4s linear infinite; 
+  }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    #avatar {
+      background: url(/assets/img/avatar120@2X.jpg);
+      -webkit-background-size: 120px 120px;
+      -moz-background-size: 120px 120px;
+      background-size: 100px 120px; } }
+	  
+	@-webkit-keyframes spin {
+	  from {
+		-webkit-transform: rotate(0deg); }
+
+	  to {
+		-webkit-transform: rotate(359deg); } }
+
+	@-moz-keyframes spin {
+	  from {
+		-moz-transform: rotate(0deg); }
+
+	  to {
+		-moz-transform: rotate(359deg); } }
+
+	@-o-keyframes spin {
+	  from {
+		-o-transform: rotate(0deg); }
+
+	  to {
+		-o-transform: rotate(359deg); } }
+
+	@-ms-keyframes spin {
+	  from {
+		-ms-transform: rotate(0deg); }
+
+	  to {
+		-ms-transform: rotate(359deg); } }
+
+	@keyframes spin {
+	  from {
+		transform: rotate(0deg); }
+
+	  to {
+		transform: rotate(359deg); } }
+		
+<!-- tutorial: http://peqiu.com/blog/rotate-your-avatar.html-->
+	</style>
   </head>
   <body>
     <div id="wrapper">
@@ -31,7 +94,7 @@
       <!-- Header -->
       <section id="header" class="skel-layers-fixed">
         <header>
-          <span class="image avatar"><img src="images/avatar-jason.jpg" alt="" /></span>
+          <span class="image avatar" id="avatar"><img src="images/avatar-jason.jpg" alt="" /></span>
           <h1 id="logo"><a href="#">Jason Wang</a></h1>
           <p>Code as if somebody else needs to understand your code
           </p>
@@ -99,7 +162,7 @@
         <!-- Two -->
         <section id="two">
           <div class="container">
-            <h3 style="text-align:center">Professional Experience</h3>
+            <h3>Professional Experience</h3>
 
             <header>
               <p style="font-size:25px"><b>Web Developer Intern</b>, &nbsp;NetEase, Inc. Guangzhou, China</p>
@@ -128,13 +191,64 @@
         <section id="three">
           <div class="container">
             <h3>Academic Projects</h3>
-            <p>Received Distinction Award of MSc (2010) and 1st Class Honors of BSc (2009) in Computer Science from City University of Hong Kong.
-            Experienced in building web products with the followings:</p>
+              <header>
+              <p style="font-size:25px"><b>School Shuttle Application</b></p>
+              <p>January ~ May, 2015</p>
+            </header>
             <ul>
-              <li>Stack: Ubuntu Linux, Nginx, uWSGI/Python, Redis, MySQL</li>
-              <li>Language: Python, JAVA, JavaScript / CSS / HTML, Go (beginner)</li>
-              <li>Framework / Library: Django, Celery, jQuery, AngularJS, Logstash</li>
-              <li>Dev-ops: AWS, Fabric, Grunt.js, Docker</li>
+              <li>Developed server models and database based on the XAMPP using PHP, JSON and Slim Framework</li>
+              <li>Designed the main activities for the UI parts implemented by multiple updated widgets using Java and XML</li>
+              <li>Enabled users to locate position of school shuttle with local public transport API and get customized navigation by Google Map API</li>
+            </ul>
+			
+              <header>
+              <p style="font-size:25px"><b>Remote Performance Assessment</b></p>
+              <p>September ~ December, 2014</p>
+            </header>
+            <ul>
+              <li>Designed a facility to serve multiple concurrent clients analyzing the similarity of C++ source files on a remote server</li>
+              <li>Provided a client process that used WPF to build a GUI which supported the file operation and processed requests</li>
+              <li>Implement a Message-Passing Communication facility to transport messages</li>
+            </ul>
+			
+              <header>
+              <p style="font-size:25px"><b>Picsearch Demo Based on Convolutional Neural Networks</b></p>
+              <p>October ~ November, 2014</p>
+            </header>
+            <ul>
+              <li>Made dimensionality reduction and completed image feature extraction using Matlab</li>
+              <li>Quoted the public dataset of Caltech-256 as the image library and implemented feature matching and ordering using Python</li>
+              <li>Built server using Cherrypy framework and optimized the user interface using bootstrap framework</li>
+            </ul>
+			
+              <header>
+              <p style="font-size:25px"><b>Ali Mobile Recommendation Algorithm Competition</b></p>
+              <p>March ~ April, 2014</p>
+            </header>
+            <ul>
+              <li>Divided the real users-commodities behavior data on Alibaba's M-commerce platforms into training set and validation set</li>
+              <li>Extracted features from the training set to build a logistic regression model implemented by Python API</li>
+              <li>Estimated the model using the validation set and optimized the algorithm to increase the score</li>
+            </ul>
+			
+              <header>
+              <p style="font-size:25px"><b>Remote Performance Assessment</b></p>
+              <p>September ~ December, 2013</p>
+            </header>
+            <ul>
+              <li>Designed a facility to serve multiple concurrent clients analyzing the similarity of C++ source files on a remote server</li>
+              <li>Provided a client process that used WPF to build a GUI which supported the file operation and processed requests</li>
+              <li>Implement a Message-Passing Communication facility to transport messages</li>
+            </ul>
+			
+              <header>
+              <p style="font-size:25px"><b>Mobile Web Development</b></p>
+              <p>September ~ November, 2012</p>
+            </header>
+            <ul>
+              <li>Designed a web page with HTML, CSS and Javascript to parse and present remote XML data</li>
+              <li>Constructed a hotel search page to scrape data from a remote website using PHP script and AJAX</li>
+              <li>Developed an Android application to perform an interactive hotel search based on BAIDU API</li>
             </ul>
           </div>
         </section>
@@ -165,16 +279,33 @@
             </ul>
           </div>
         </section>
+		
+		  <!-- Five -->
+        <section id="five">
+          <div class="container">
+            <h3>Technical Skills</h3>
+
+            <header>
+			  <ul>
+              <li><b>Programming Languages:</b> HTML, CSS, Javascript, PHP, JSON, JAVA , C/C++, Python</li>
+              <li><b>Tools:</b> XAMPP, Sublime, WebStorm, Firebug, Git, MySQL, MS SQL Server, Evernote</li>
+              <li><b>Software:</b>Dreamweaver CS6, Eclipse, MS Visual Studio, MS Visio, Android Studio, Matlab</li>
+			  <li><b>Web Framework:</b> Bootstrap, AngularJS</li>
+            </ul>
+            </header>
+          </div>
+        </section>
+		
       </div>
 
       <!-- Footer -->
-      <section id="footer">
+     <!-- <section id="footer">
         <div class="container">
           <ul class="copyright">
             <li><a href="?print=1">Print friendly version</a></li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
           </ul>
         </div>
-      </section>
+      </section> -->
 
     </div>
   </body>
